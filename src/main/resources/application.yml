@@ -1,0 +1,21 @@
+spring:
+  banner:
+    charset: UTF-8
+  application:
+    name: @project.artifactId@
+    version: @project.version@
+  main:
+    web-application-type: servlet
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ticketing_service
+    username: postgres
+    password: h@sib2211
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: localhost
+      port: 6379
