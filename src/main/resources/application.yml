@@ -19,3 +19,6 @@ spring:
     redis:
       host: localhost
       port: 6379
+
+  jackson:
+    time-zone: Asia/Dhaka

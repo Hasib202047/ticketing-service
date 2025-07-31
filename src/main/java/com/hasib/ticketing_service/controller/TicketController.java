@@ -2,7 +2,6 @@ package com.hasib.ticketing_service.controller;
 
 import com.hasib.ticketing_service.dto.TicketDto;
 import com.hasib.ticketing_service.enums.Status;
-import com.hasib.ticketing_service.model.Ticket;
 import com.hasib.ticketing_service.service.TicketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,5 +20,10 @@ public class TicketController {
     @PostMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable Long id, @RequestParam Status status) {
         return ticketService.updateStatus(id, status);
+    }
+
+    @GetMapping("/get-all")
+    public ResponseEntity<?> getAll() {
+        return ticketService.getAll();
     }
 }
