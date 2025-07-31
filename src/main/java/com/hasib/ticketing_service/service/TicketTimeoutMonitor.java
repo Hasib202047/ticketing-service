@@ -13,7 +13,7 @@ import java.util.List;
 @Configuration
 @RequiredArgsConstructor
 public class TicketTimeoutMonitor {
-    private final RedisTicketScheduler redisScheduler;
+//    private final RedisTicketScheduler redisScheduler;
     private final TicketRepository ticketRepository;
     private final DatabaseTicketScheduler databaseTicketScheduler;
 

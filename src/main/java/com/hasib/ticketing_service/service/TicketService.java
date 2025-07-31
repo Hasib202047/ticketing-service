@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 public class TicketService {
     private final TicketRepository ticketRepository;
     private final ModelMapper modelMapper;
-    private final RedisTicketScheduler redisScheduler;
+//    private final RedisTicketScheduler redisScheduler;
     private final DatabaseTicketScheduler databaseTicketScheduler;
 
     public ResponseEntity<?> save(TicketDto ticketDto) {
