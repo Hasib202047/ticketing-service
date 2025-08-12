@@ -16,6 +16,7 @@ public class TicketTimeoutMonitor {
 //    private final RedisTicketScheduler redisScheduler;
     private final TicketRepository ticketRepository;
     private final DatabaseTicketScheduler databaseTicketScheduler;
+    private final EmailService emailService;
 
 //    @Scheduled(fixedRate = 30000) // every 30 seconds
 //    public void checkExpiredTickets() {
@@ -58,6 +59,7 @@ public class TicketTimeoutMonitor {
 
     private void notifyDepartmentHead(Ticket ticket) {
         // TODO: Email/SMS/Push notification logic here
+        emailService.sendEmail("hasibul.hoque129971@gmail.com","Alarming Mail","Dear sir,Please check your delulu!");
         System.out.println("🔔 Ticket " + ticket.getId() + " missed SLA and was escalated.");
     }
 }

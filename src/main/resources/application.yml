@@ -22,3 +22,14 @@ spring:
 
   jackson:
     time-zone: Asia/Dhaka
+  mail:
+    host: smtp.hostinger.com
+    port: 587
+    username: hasibul.hoque@businessaccelerate.com.bd
+    password: H@sib300814
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
